@@ -180,6 +180,9 @@
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="text">
+       <string>F:/FRC Server/scoutingData.db</string>
+      </property>
      </widget>
     </item>
     <item row="0" column="2">
@@ -246,6 +249,15 @@
         <verstretch>1</verstretch>
        </sizepolicy>
       </property>
+      <property name="sortingEnabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+       <bool>true</bool>
+      </attribute>
      </widget>
     </item>
    </layout>

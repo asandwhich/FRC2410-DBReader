@@ -25,6 +25,8 @@ private slots:
 
     void on_winButton_toggled(bool checked);
 
+    void on_shootButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     DatabaseManager toast;

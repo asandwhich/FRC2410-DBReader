@@ -22,7 +22,7 @@ bool DatabaseManager::openDB(QString path){
 bool DatabaseManager::readDB(){
     if( db.isOpen() ){
         //dbModel = new QSqlQueryModel;
-        dbModel->setQuery("select * from test", db);
+        dbModel->setQuery("select * from Scouting_Data", db);
         return true;
     } else {
         return false;
