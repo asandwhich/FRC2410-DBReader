@@ -22,11 +22,7 @@ private slots:
 
     void on_openButton_clicked();
 
-    void on_shootButton_toggled(bool checked);
-
-    void on_winButton_toggled(bool checked);
-
-    void on_shootButton_clicked();
+    void on_refreshButton_clicked();
 
 private:
     Ui::MainWindow *ui;

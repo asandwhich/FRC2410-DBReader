@@ -6,9 +6,6 @@
 #include <QSql>
 #include <QSqlDatabase>
 #include <QSqlQueryModel>
-//#include <QtSql/QSqlDatabase>
-//#include <QtSql/QSqlDriver>
-//#include <QtSql/QSql>
 
 class DatabaseManager : public QObject
 {

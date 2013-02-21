@@ -1,10 +1,5 @@
 #include "databasemanager.h"
-//#include <QtSql/QSql>
-//#include <QtSql/QSqlDatabase>
-//#include <QSql>
-//#include <QSqlDatabase>
-//#include <QtSql/QSqlDriver>
-//#include <QtSql/QSql>
+
 DatabaseManager::DatabaseManager(QObject *parent) :
     QObject(parent)
 {
@@ -21,7 +16,6 @@ bool DatabaseManager::openDB(QString path){
 }
 bool DatabaseManager::readDB(){
     if( db.isOpen() ){
-        //dbModel = new QSqlQueryModel;
         dbModel->setQuery("select * from Scouting_Data", db);
         return true;
     } else {
