@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "databasemanager.h"
+#include <QSortFilterProxyModel>
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +31,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     DatabaseManager toast;
+    QSortFilterProxyModel *mainModel;
     void populateTable();
 };
 

@@ -4,13 +4,13 @@
 #include <QLineEdit>
 #include "databasemanager.h"
 #include <QTreeView>
+#include <QSortFilterProxyModel>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->tableView->setSortingEnabled(true);
 }
 
 MainWindow::~MainWindow()
@@ -43,7 +43,10 @@ void MainWindow::on_openButton_clicked()
 void MainWindow::populateTable(){
     if( toast.readDB() ){
         //ui->tableWidget->setModel(toast.dbModel);
-        ui->tableView->setModel(toast.dbModel);
+        mainModel = new QSortFilterProxyModel(this);
+        mainModel->setSourceModel(toast.dbModel);
+        ui->tableView->setModel(mainModel);
+        //ui->tableView->setModel(toast.dbModel);
         //ui->tableView->horizontalHeader()->
         //ui->tableView->show();
     }
