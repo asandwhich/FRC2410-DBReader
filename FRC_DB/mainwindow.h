@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "databasemanager.h"
 #include <QSortFilterProxyModel>
+#include "teamwindow.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,11 +25,14 @@ private slots:
 
     void on_refreshButton_clicked();
 
+    void on_teamButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     DatabaseManager toast;
     QSortFilterProxyModel *mainModel;
     void populateTable();
+    TeamWindow *teams;
 };
 
 #endif // MAINWINDOW_H

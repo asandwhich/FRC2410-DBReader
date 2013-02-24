@@ -6,6 +6,7 @@
 #include <QSql>
 #include <QSqlDatabase>
 #include <QSqlQueryModel>
+#include <QSqlRecord>
 
 class DatabaseManager : public QObject
 {
@@ -16,6 +17,10 @@ public:
     bool openDB(QString path);
     QSqlQueryModel *dbModel;
     bool readDB();
+    bool readAvgDB();
+    QString getPath();
+    //float getAverage( int teamNum, QString column );
+
 signals:
     
 public slots:

@@ -5,6 +5,7 @@
 #include "databasemanager.h"
 #include <QTreeView>
 #include <QSortFilterProxyModel>
+#include "teamwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -32,7 +33,7 @@ void MainWindow::on_openButton_clicked()
         if( toast.openDB( filePath ) ){
             ui->debugLabel->setText("Database opened");
             MainWindow::populateTable();
-        }else{
+        } else {
             ui->debugLabel->setText("Unable to open database");
         }
     } else {
@@ -50,5 +51,13 @@ void MainWindow::populateTable(){
 
 void MainWindow::on_refreshButton_clicked()
 {
-    ui->tableView->reset();
+    MainWindow::on_openButton_clicked();
+}
+
+void MainWindow::on_teamButton_clicked()
+{
+    teams = new TeamWindow(this);
+    teams->show();
+    teams->setPath( toast.getPath() );
+    teams->start();
 }

@@ -13,17 +13,27 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = FRC_DB
 TEMPLATE = app
 
-CONFIG += static
+
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    databasemanager.cpp
+    databasemanager.cpp \
+    teamwindow.cpp
 
 HEADERS  += mainwindow.h \
-    databasemanager.h
+    databasemanager.h \
+    teamwindow.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    teamwindow.ui
 
 RESOURCES +=
 
 QMAKE_CXXFLAGS += -std=gnu++0x
+
+CONFIG += static
+static {
+    CONFIG += static
+    QTPLUGIN += qsqlite qsqlodbc
+    DEFINES += STATIC
+}
