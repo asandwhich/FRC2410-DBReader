@@ -19,7 +19,6 @@ public:
     bool readDB();
     bool readAvgDB();
     QString getPath();
-    //float getAverage( int teamNum, QString column );
 
 signals:
     

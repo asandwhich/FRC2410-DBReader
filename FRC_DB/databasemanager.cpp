@@ -33,24 +33,3 @@ bool DatabaseManager::readAvgDB(){
         return false;
     }
 }
-
-/*
-float DatabaseManager::getAverage( int teamNum, QString column ){
-    QString query = "select avg(" + column + ") from Scouting_Data where Team_number == " + QString(teamNum);
-    dbModel->setQuery( query );
-    double avg = dbModel->record().value("avg("+column+")").toDouble();
-    return (float) avg;
-}
-*/
-//SQL queries to use
-//select avg( column ) from Scouting_Data where Team_number == num
-
-//get team numbers
-//select distrinct Team_Number from scouting_data
-
-//forget the rest
-/*
-select TEAM_NUMBER, avg(TEAM_SCORE), avg(ALLIANCE_SCORE), avg(TEAM_PENALTIES)
-from Scouting_Data
-group by TEAM_NUMBER
-*/
