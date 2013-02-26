@@ -27,7 +27,8 @@ HEADERS  += mainwindow.h \
 FORMS    += mainwindow.ui \
     teamwindow.ui
 
-RESOURCES +=
+RESOURCES += \
+    Refresh.qrc
 
 QMAKE_CXXFLAGS += -std=gnu++0x
 
