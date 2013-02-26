@@ -14,8 +14,8 @@
    <string>FRC 2013 - Scouting DB Reader</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../Imgs/favicon.ico</normaloff>../Imgs/favicon.ico</iconset>
+   <iconset resource="Refresh.qrc">
+    <normaloff>:/imgs/icos/frcIco.ico</normaloff>:/imgs/icos/frcIco.ico</iconset>
   </property>
   <property name="iconSize">
    <size>
@@ -40,7 +40,7 @@
        <bool>true</bool>
       </property>
       <attribute name="horizontalHeaderCascadingSectionResizes">
-       <bool>false</bool>
+       <bool>true</bool>
       </attribute>
       <attribute name="verticalHeaderShowSortIndicator" stdset="0">
        <bool>true</bool>
@@ -66,8 +66,8 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>../Imgs/Refresh-icon.png</normaloff>../Imgs/Refresh-icon.png</iconset>
+       <iconset resource="Refresh.qrc">
+        <normaloff>:/imgs/icos/refreshIco.png</normaloff>:/imgs/icos/refreshIco.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -133,6 +133,8 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="Refresh.qrc"/>
+ </resources>
  <connections/>
 </ui>

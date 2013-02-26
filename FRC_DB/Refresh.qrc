@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/imgs/icos">
+        <file>frcIco.ico</file>
+        <file>refreshIco.png</file>
+    </qresource>
+</RCC>
