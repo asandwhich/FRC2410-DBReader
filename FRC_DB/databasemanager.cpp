@@ -16,7 +16,7 @@ bool DatabaseManager::openDB(QString path){
 }
 bool DatabaseManager::readDB(){
     if( db.isOpen() ){
-        dbModel->setQuery("select * from Scouting_Data", db);
+        dbModel->setQuery("select * from Match_Data", db);
         return true;
     } else {
         return false;
