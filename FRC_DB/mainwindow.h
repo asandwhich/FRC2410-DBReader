@@ -27,12 +27,15 @@ private slots:
 
     void on_teamButton_clicked();
 
+    void on_pitButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     DatabaseManager toast;
     QSortFilterProxyModel *mainModel;
     void populateTable();
     TeamWindow *teams;
+    bool isonPit;
 };
 
 #endif // MAINWINDOW_H

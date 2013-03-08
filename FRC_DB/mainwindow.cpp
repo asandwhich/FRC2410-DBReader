@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    isonPit = false;
 }
 
 MainWindow::~MainWindow()
@@ -33,6 +34,7 @@ void MainWindow::on_openButton_clicked()
         if( toast.openDB( filePath ) ){
             ui->debugLabel->setText("Database opened");
             MainWindow::populateTable();
+            ui->pitButton->setEnabled(true);
         } else {
             ui->debugLabel->setText("Unable to open database");
         }
@@ -60,4 +62,23 @@ void MainWindow::on_teamButton_clicked()
     teams->show();
     teams->setPath( toast.getPath() );
     teams->start();
+}
+
+void MainWindow::on_pitButton_clicked()
+{
+    if( !isonPit ){
+        toast.dbModel->setQuery("select * from Pit_Data");
+        mainModel = new QSortFilterProxyModel(this);
+        mainModel->setSourceModel(toast.dbModel);
+        ui->tableView->setModel(mainModel);
+        ui->pitButton->setText("Match Data");
+        isonPit = true;
+    } else {
+        toast.dbModel->setQuery("select * from Match_Data");
+        mainModel = new QSortFilterProxyModel(this);
+        mainModel->setSourceModel(toast.dbModel);
+        ui->tableView->setModel(mainModel);
+        ui->pitButton->setText("Pit Data");
+        isonPit = false;
+    }
 }
