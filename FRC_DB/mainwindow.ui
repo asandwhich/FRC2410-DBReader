@@ -86,7 +86,7 @@
        </sizepolicy>
       </property>
       <property name="text">
-       <string>F:/FRC Server/scoutingData.db</string>
+       <string>C:/FRCScoutingData/scoutingData.db</string>
       </property>
      </widget>
     </item>
